@@ -14,7 +14,7 @@ const ResponseCheck = () => {
         setstate("now");
         setmessage("now click");
         startTime.current = new Date();
-      }, Math.floor(Math.random() * 1000) + 2000);
+      }, Math.floor(Math.random() * 1000000000000000) + 2000);
       setstate("ready");
       setmessage("wait for green")
     } else if (state === "ready") {
