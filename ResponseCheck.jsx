@@ -14,7 +14,7 @@ const ResponseCheck = () => {
         setstate("now");
         setmessage("now click");
         startTime.current = new Date();
-      }, Math.floor(Math.random() * 3000) + 2000);
+      }, Math.floor(Math.random() * 5000) + 2000);
       setstate("ready");
       setmessage("wait for green")
     } else if (state === "ready") {
@@ -38,8 +38,8 @@ const ResponseCheck = () => {
     return result.length === 0
       ? null
       : <>
-        <div>평균 시간: {result.reduce((a, c) => a + c) / result.length}ms</div>
-        <button onClick={onReset}>리셋</button>
+        <div className="times">평균 시간: {result.reduce((a, c) => a + c) / result.length}ms</div>
+        <button className="times sd" onClick={onReset}>리셋</button>
       </>
   };
   return (
